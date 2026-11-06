@@ -34,7 +34,7 @@ def rank_from_scores_exact(
     topk: int,
 ) -> Dict[str, torch.Tensor]:
     """
-    Return exactly the same number of candidate anchors as CausalScorer.
+    Return the same number of anchors as TopologySensitiveAnchorLocalizer.
 
     Output:
         {
@@ -94,7 +94,7 @@ def score_vulnerability_ppr(
     topk:
         Must be candidate_topk, not final topk.
 
-    Output format is compatible with CausalScorer.score_vulnerability().
+    Output format matches TopologySensitiveAnchorLocalizer.score_topology_sensitivity().
     """
     device = candidate_nodes.device
     adj = dgl_to_scipy_undirected_no_loop(G)

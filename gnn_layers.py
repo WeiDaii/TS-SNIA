@@ -1,3 +1,4 @@
+"""GNN layers and auxiliary architectures used by models.py."""
 import torch
 import torch.nn.functional as F
 import torch.nn as nn
